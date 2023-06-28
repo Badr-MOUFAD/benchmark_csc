@@ -62,7 +62,6 @@ fmt_verb2 = '| {:4s} | {:4s} | {:11s} |'
 
 
 def solve_lasso(y, H, a0, lambd, tol=1e-4, solver='celer', positive=False):
-
     """
     Wrapper of spams.fistaFlat for the Lasso.
 
@@ -126,7 +125,6 @@ def optimality_conditions(y, H, a):
 
 
 def H_column_full(W, T, j):
-
     """
     Computes the full j-th column of matrix H.
 
@@ -165,7 +163,6 @@ def H_column_full(W, T, j):
 
 
 def H_column_window(W, w, neuron, time):
-
     """Computes the column of matrix H.
 
     This corresponds to the given neuron and time, for a temporal
@@ -207,7 +204,6 @@ def H_column_window(W, w, neuron, time):
 
 
 def optimality_conditions_corr(y, H, a, W, T):
-
     """Computation of the optimality conditions of the Lasso.
 
     This uses efficient product $H.T * (Hx - y)$ as a correlation.
@@ -250,7 +246,6 @@ def optimality_conditions_corr(y, H, a, W, T):
 
 
 def optimality_conditions_corr_window(y, H, a, W, w):
-
     """Computation of the optimality conditions of the Lasso.
 
     Restricted on a temporal window of size w, wth efficient product
@@ -294,7 +289,6 @@ def optimality_conditions_corr_window(y, H, a, W, w):
 
 def generic_working_set(S, H, N, lambd, itermax=1000, verbose=False,
                         kkt_stop=1e-3, log=False):
-
     """Generic working set.
 
     Naive computations of the optimality conditions.
@@ -403,7 +397,6 @@ def generic_working_set(S, H, N, lambd, itermax=1000, verbose=False,
 def working_set_convolutional(S, W, lambd, itermax=1000, kkt_stop=1e-4,
                               verbose=False, log=False, solver='celer',
                               positive=False):
-
     """
      Working set, computing the optimality conditions with the convolution.
 
@@ -519,7 +512,6 @@ def working_set_convolutional(S, W, lambd, itermax=1000, kkt_stop=1e-4,
 def sliding_window_working_set(S, W, lambd, itermax=1000, kkt_stop=1e-4,
                                verbose=False, log=False, solver='celer',
                                positive=False):
-
     """Sliding Window Working set.
 
     Presented in the article: https://doi.org/10.1007/s10440-022-00494-x.
